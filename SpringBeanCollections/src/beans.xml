@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="example" class="example">
+   <property name="list">
+   		<list>
+   				<ref bean="Student"/>
+			   <value>India</value>
+			   <value>Pakistan</value>
+			   <value>USA</value>
+			   <value>USA</value>
+  		 </list>
+  		 </property>
+   <property name="map">
+   		<map>
+   			<entry key = "1" value-ref = "Student"/>
+            <entry key = "2" value = "Pakistan"/>
+            <entry key = "3" value = "USA"/>
+            <entry key = "4" value = "USA"/>
+   		</map>
+   		</property>
+   <property name="set">
+   		<set>
+   			<value>India</value>
+   			<value>Pakistan</value>
+   			<value>USA</value>
+   			<value>USA</value>
+   		</set>
+   		</property>
+   <property name="prop">
+   		<props>
+   			<prop key="one">India</prop>
+   			<prop key="two">Pakistan</prop>
+   			<prop key="three">USA</prop>
+   			<prop key="four">USA</prop>
+   		</props>
+   
+   </property>
+   </bean>
+   
+   <bean id="Student" class="Student">
+   	<property name="name" value="Harman"></property>
+   	<property name="address" value="Jalandhar"></property>
+   </bean>
+   
+   </beans>
